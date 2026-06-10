@@ -28,7 +28,7 @@ export default function Navbar({ fixed = false, activeView, setActiveView }) {
       role="navigation"
       aria-label="Main navigation"
     >
-      <div className="brand">chandhru.dev</div>
+      <div className="brand">chandhru.me</div>
       <div className="hidden md:flex gap-5 links">
         <a href="#home" onClick={(e) => { e.preventDefault(); setActiveView('main'); window.scrollTo(0,0); }}>HOME</a>
         <a href="#expertise" onClick={(e) => { e.preventDefault(); setActiveView('expertise'); }}>EXPERTISE</a>
