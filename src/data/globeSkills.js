@@ -1,0 +1,40 @@
+export const GLOBE_SKILLS = [
+  // AI/ML
+  { name: "PyTorch", iconHtml: '<i class="devicon-pytorch-original"></i>', ic: "#ee4c2c", lat: 50, lon: -30 },
+  { name: "Scikit-Learn", iconHtml: '<i class="devicon-scikitlearn-plain"></i>', ic: "#f7931e", lat: 30, lon: 30 },
+  { name: "Groq API", iconHtml: '🧠', ic: "#f55036", lat: 60, lon: 100 },
+  { name: "Gemini API", iconHtml: '✨', ic: "#1a73e8", lat: 25, lon: -120 },
+  { name: "NumPy", iconHtml: '<i class="devicon-numpy-original"></i>', ic: "#4dabcf", lat: 30, lon: -30 },
+  { name: "Pandas", iconHtml: '<i class="devicon-pandas-original"></i>', ic: "#4b67d2", lat: 30, lon: 100 },
+  { name: "Matplotlib", iconHtml: '📊', ic: "#35a2de", lat: 5, lon: -80 },
+  { name: "Seaborn", iconHtml: '📈', ic: "#6b9aeb", lat: 5, lon: -10 },
+  { name: "Classification", iconHtml: '🏷️', ic: "#8b5cf6", lat: 10, lon: 10 },
+  { name: "Regression", iconHtml: '📉', ic: "#f43f5e", lat: 40, lon: -50 },
+  { name: "Clustering", iconHtml: '🎯', ic: "#10b981", lat: -10, lon: 50 },
+  { name: "XGBoost", iconHtml: '🚀', ic: "#f59e0b", lat: 20, lon: -10 },
+  { name: "Decision Tree", iconHtml: '🌳', ic: "#22c55e", lat: 50, lon: 70 },
+  // Languages
+  { name: "Python", iconHtml: '<i class="devicon-python-plain"></i>', ic: "#498bc4", lat: 5, lon: 120 },
+  { name: "JavaScript", iconHtml: '<i class="devicon-javascript-plain"></i>', ic: "#f7df1e", lat: -25, lon: -100 },
+  { name: "C", iconHtml: '<i class="devicon-c-plain"></i>', ic: "#a8b9cc", lat: -25, lon: -40 },
+  { name: "C++", iconHtml: '<i class="devicon-cplusplus-plain"></i>', ic: "#0076cf", lat: -25, lon: 20 },
+  { name: "HTML", iconHtml: '<i class="devicon-html5-plain"></i>', ic: "#ff6a3b", lat: -15, lon: 100 },
+  { name: "CSS", iconHtml: '<i class="devicon-css3-plain"></i>', ic: "#3190da", lat: -50, lon: -120 },
+  { name: "PHP", iconHtml: '<i class="devicon-php-plain"></i>', ic: "#9296cd", lat: -50, lon: 40 },
+  // Web & Backend
+  { name: "React.js", iconHtml: '<i class="devicon-react-original"></i>', ic: "#61dafb", lat: -40, lon: 80 },
+  { name: "React Native", iconHtml: '<i class="devicon-react-original"></i>', ic: "#61dafb", lat: -65, lon: 30 },
+  { name: "Node.js", iconHtml: '<i class="devicon-nodejs-plain"></i>', ic: "#4caf50", lat: -65, lon: 80 },
+  { name: "Express.js", iconHtml: '<i class="devicon-express-original"></i>', ic: "#e2e8f0", lat: 70, lon: 0 },
+  { name: "Flask", iconHtml: '<i class="devicon-flask-original"></i>', ic: "#e2e8f0", lat: 15, lon: 60 },
+  { name: "REST APIs", iconHtml: '🔗', ic: "#2dd4bf", lat: 40, lon: -90 },
+  { name: "Expo", iconHtml: '▲', ic: "#e2e8f0", lat: -10, lon: -150 },
+  // Databases
+  { name: "MySQL", iconHtml: '<i class="devicon-mysql-plain"></i>', ic: "#5d9cc9", lat: 45, lon: 150 },
+  { name: "MongoDB", iconHtml: '<i class="devicon-mongodb-plain"></i>', ic: "#4ade80", lat: -35, lon: 140 },
+  { name: "PostgreSQL", iconHtml: '<i class="devicon-postgresql-plain"></i>', ic: "#4b8ebf", lat: 0, lon: 50 },
+  // Tools
+  { name: "Git", iconHtml: '<i class="devicon-git-plain"></i>', ic: "#f05032", lat: -70, lon: -50 },
+  { name: "GitHub", iconHtml: '<i class="devicon-github-original"></i>', ic: "#ffffff", lat: 20, lon: 160 },
+  { name: "Linux", iconHtml: '<i class="devicon-linux-plain"></i>', ic: "#fcc624", lat: -10, lon: -60 },
+]
