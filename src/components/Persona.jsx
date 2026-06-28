@@ -68,7 +68,7 @@ export default function Persona({ parallaxOffset, scrollY }) {
 
               {/* Item 2 */}
               <div className="edu-timeline-item reveal reveal-up reveal-delay-1">
-                <div className="edu-timeline-dot" style={{ top: '20px' }}></div>
+<div className="edu-timeline-dot" style={{ top: '20px' }}></div>
                 <div className="edu-card edu-card-small">
                   <div className="edu-content">
                     <div className="edu-header">
@@ -86,7 +86,7 @@ export default function Persona({ parallaxOffset, scrollY }) {
 
               {/* Item 3 */}
               <div className="edu-timeline-item reveal reveal-up reveal-delay-2">
-                <div className="edu-timeline-dot" style={{ top: '20px' }}></div>
+<div className="edu-timeline-dot" style={{ top: '20px' }}></div>
                 <div className="edu-card edu-card-small">
                   <div className="edu-content">
                     <div className="edu-header">
@@ -109,8 +109,8 @@ export default function Persona({ parallaxOffset, scrollY }) {
         </div>
 
         {/* Bottom Socials */}
-        <div className="find-me-section reveal" style={{ marginTop: '80px' }}>
-          <h3 className="edu-title" style={{ marginBottom: '32px' }}>Find me on</h3>
+<div className="find-me-section reveal" style={{ marginTop: '80px' }}>
+<h3 className="edu-title" style={{ marginBottom: '32px' }}>Find me on</h3>
           <div className="persona-stats-grid social-grid">
             <a href="https://x.com/CKusalavan42473" className="social-card reveal reveal-scale" target="_blank" rel="noopener noreferrer">
               <div className="social-icon">
