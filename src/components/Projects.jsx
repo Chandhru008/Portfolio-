@@ -56,9 +56,9 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
   ]
 
   return (
-    <section ref={sectionRef} id="projects" className={`projects-section ${featuredOnly ? 'featured-mode' : 'full-mode'}`} style={featuredOnly ? { background: 'transparent' } : {}}>
+<section ref={sectionRef} id="projects" className={`projects-section ${featuredOnly ? 'featured-mode' : 'full-mode'}`} style={featuredOnly ? { background: 'transparent' } : {}}>
       {!featuredOnly && (
-        <div style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
+<div style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
           <UniverseBackground parallaxOffset={parallaxOffset} scrollY={scrollY} />
         </div>
       )}
@@ -67,9 +67,9 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
       <div className="projects-container">
         {/* Section header */}
         <div className={`projects-header ${isVisible ? 'visible' : ''}`}>
-          <span className="projects-eyebrow" style={{ letterSpacing: featuredOnly ? '0.2em' : 'normal' }}>
+<span className="projects-eyebrow" style={{ letterSpacing: featuredOnly ? '0.2em' : 'normal' }}>
             {featuredOnly ? (
-              <><span style={{color:'#22d3ee'}}>●</span> &nbsp; FEATURED WORK</>
+<><span style={{color:'#22d3ee'}}>●</span> &nbsp; FEATURED WORK</>
             ) : (
               "✦ &nbsp; PORTFOLIO &nbsp; ✦"
             )}
@@ -89,7 +89,7 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
         {!featuredOnly && (
           <div className={`projects-filters ${isVisible ? 'visible' : ''}`}>
             {filters.map((f) => (
-              <button
+<button
                 key={f.key}
                 type="button"
                 className={`filter-pill ${filter === f.key ? 'active' : ''}`}
@@ -97,7 +97,7 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
               >
                 <span className="filter-dot" />
                 {f.label}
-              </button>
+</button>
             ))}
           </div>
         )}
@@ -120,12 +120,12 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
             >
               {featuredOnly ? (
                 <>
-                  <div className="card-top-line" style={{ background: project.color, width: '32px', height: '2px', marginBottom: '20px' }}></div>
-                  <h3 className="card-title" style={{ fontSize: '1.4rem', marginBottom: '16px' }}>{project.title}</h3>
-                  <p className="card-desc" style={{ fontSize: '0.9rem', marginBottom: '24px', flexGrow: 1, color: '#d1d5db', lineHeight: 1.6 }}>{project.description}</p>
+<div className="card-top-line" style={{ background: project.color, width: '32px', height: '2px', marginBottom: '20px' }}></div>
+<h3 className="card-title" style={{ fontSize: '1.4rem', marginBottom: '16px' }}>{project.title}</h3>
+<p className="card-desc" style={{ fontSize: '0.9rem', marginBottom: '24px', flexGrow: 1, color: '#d1d5db', lineHeight: 1.6 }}>{project.description}</p>
                   <div className="card-tags">
                     {project.tags.map((tag) => (
-                      <span key={tag} className="card-tag" style={{ border: `1px solid ${project.color}33`, color: project.color, background: 'transparent' }}>{tag}</span>
+<span key={tag} className="card-tag" style={{ border: `1px solid ${project.color}33`, color: project.color, background: 'transparent' }}>{tag}</span>
                     ))}
                   </div>
                   <div className="card-shine" />
@@ -215,16 +215,16 @@ export default function Projects({ parallaxOffset, scrollY, featuredOnly = false
 
         {/* View All Button */}
         {featuredOnly && (
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '56px' }}>
-            <button
+<div style={{ display: 'flex', justifyContent: 'center', marginTop: '56px' }}>
+<button
               type="button"
               className="btn-persona-wrap"
               onClick={() => { if(setActiveView) { setActiveView('projects'); window.scrollTo(0,0); } }}
             >
-              <span className="btn-persona-inner" style={{ padding: '10px 28px', fontSize: '0.9rem' }}>
+<span className="btn-persona-inner" style={{ padding: '10px 28px', fontSize: '0.9rem' }}>
                 View All Projects <span className="arrow">→</span>
               </span>
-            </button>
+</button>
           </div>
         )}
       </div>
