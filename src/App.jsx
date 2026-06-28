@@ -64,7 +64,7 @@ export default function App() {
       {activeView === 'certificates' && <Credentials parallaxOffset={parallaxOffset} scrollY={scrollY} />}
       {activeView === 'main' && (
         <>
-          <div style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
+<div style={{ position: 'fixed', inset: 0, width: '100vw', height: '100vh', zIndex: 0, pointerEvents: 'none' }}>
             <UniverseBackground parallaxOffset={parallaxOffset} scrollY={scrollY} />
           </div>
           <Hero parallaxOffset={parallaxOffset} scrollY={scrollY} />
