@@ -7,7 +7,7 @@ export default function ReachOut() {
   useGlobalReveal()
 
   return (
-    <section id="reach-out" ref={sectionRef} className="reachout-section" style={{ background: 'transparent' }}>
+<section id="reach-out" ref={sectionRef} className="reachout-section" style={{ background: 'transparent' }}>
       <div className="reachout-container">
         <div className="reachout-header">
           <p className="reachout-eyebrow">SKILLS · WORKFLOW · IDENTITY</p>
