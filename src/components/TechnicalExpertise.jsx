@@ -39,7 +39,7 @@ export default function TechnicalExpertise({ parallaxOffset, scrollY }) {
         </h2>
       </div>
 
-      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', transform: `translateY(${localScroll * 0.5}px)` }}>
+<div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', transform: `translateY(${localScroll * 0.5}px)` }}>
         <StarsBackground />
       </div>
 
@@ -67,7 +67,7 @@ export default function TechnicalExpertise({ parallaxOffset, scrollY }) {
       <div className="skills-panel">
         <nav className="tab-nav">
           {CATEGORIES.map((c, i) => (
-            <button
+<button
               key={c.label}
               type="button"
               className={`tab-btn ${i === activeIdx ? 'active' : ''}`}
@@ -76,7 +76,7 @@ export default function TechnicalExpertise({ parallaxOffset, scrollY }) {
             >
               <span className="tab-dot" />
               {c.label}
-            </button>
+</button>
           ))}
         </nav>
         <div className="cat-card">
@@ -105,9 +105,9 @@ export default function TechnicalExpertise({ parallaxOffset, scrollY }) {
             {cat.skills.map((skill) => {
               const globeItem = GLOBE_SKILLS.find(s => s.name === skill)
               return (
-                <span key={skill} className="skill-pill" style={{ '--pd': cat.color }}>
+<span key={skill} className="skill-pill" style={{ '--pd': cat.color }}>
                   {globeItem && globeItem.iconHtml && (
-                    <div className="sp-icon" dangerouslySetInnerHTML={{ __html: globeItem.iconHtml }} style={{ color: globeItem.ic }} />
+<div className="sp-icon" dangerouslySetInnerHTML={{ __html: globeItem.iconHtml }} style={{ color: globeItem.ic }} />
                   )}
                   {skill}
                 </span>
