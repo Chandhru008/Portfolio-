@@ -37,15 +37,15 @@ export default function Navbar({ fixed = false, activeView, setActiveView }) {
         <a href="#projects" onClick={(e) => { e.preventDefault(); setActiveView('projects'); window.scrollTo(0,0); }}>PROJECTS</a>
       </div>
       <div className="flex gap-2.5 actions">
-        <button 
+<button aria-label='Navigation Menu'>
           type="button" 
           className="glass-btn nav-btn-secondary"
           onClick={toggleTheme}
         >
           {isDarkMode ? 'DARK' : 'LIGHT'}
-        </button>
+</button>
         {/* Hamburger Menu Button */}
-        <button
+<button
           type="button"
           className="glass-btn nav-btn-secondary md:hidden flex flex-col justify-center items-center gap-[4px] w-[40px] h-[40px]"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -53,12 +53,12 @@ export default function Navbar({ fixed = false, activeView, setActiveView }) {
           <span className={`block w-5 h-[2px] bg-white transition-transform ${isMobileMenuOpen ? 'rotate-45 translate-y-[6px]' : ''}`}></span>
           <span className={`block w-5 h-[2px] bg-white transition-opacity ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
           <span className={`block w-5 h-[2px] bg-white transition-transform ${isMobileMenuOpen ? '-rotate-45 -translate-y-[6px]' : ''}`}></span>
-        </button>
+</button>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isMobileMenuOpen && (
-        <div className="absolute top-[120%] left-0 w-full rounded-2xl flex flex-col p-3 gap-1 md:hidden z-[100] shadow-2xl border border-white/5 overflow-hidden" style={{ background: '#13151a', backdropFilter: 'blur(20px)' }}>
+<div className="absolute top-[120%] left-0 w-full rounded-2xl flex flex-col p-3 gap-1 md:hidden z-[100] shadow-2xl border border-white/5 overflow-hidden" style={{ background: '#13151a', backdropFilter: 'blur(20px)' }}>
           <a href="#home" onClick={(e) => { e.preventDefault(); setActiveView('main'); window.scrollTo(0,0); setIsMobileMenuOpen(false); }} className={getMobileLinkClass('main')}>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
             HOME
