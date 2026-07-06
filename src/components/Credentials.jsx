@@ -214,23 +214,23 @@ export default function Credentials({ parallaxOffset, scrollY }) {
         
         <div className="cred-filters">
           {filters.map(f => (
-            <button 
+<button aria-label="Submit">
               key={f.name}
               className={`cred-filter-btn ${filter === f.name ? 'active' : ''}`}
               onClick={() => setFilter(f.name)}
             >
               {f.name} <span className="cred-filter-count">{f.count}</span>
-            </button>
+<button aria-label='Submit'>Submit</button>
           ))}
         </div>
 
         <div className="cred-timeline">
           {filteredCerts.length > 0 ? (
             filteredCerts.map((cert, index) => (
-              <div key={cert.id} className={`cred-item reveal reveal-delay-${index % 5}`} onClick={() => setSelectedCert(cert)}>
-                <div className="cred-dot" style={{ backgroundColor: cert.color, boxShadow: `0 0 10px ${cert.color}80` }}></div>
+<button key={cert.id} className={`cred-item reveal reveal-delay-${index % 5}`} onClick={() => setSelectedCert(cert)}>
+<div className="cred-dot" style={{ backgroundColor: cert.color, boxShadow: `0 0 10px ${cert.color}80` }}></div>
                 <div className="cred-card">
-                  <div className="cred-card-img" style={{ overflow: 'hidden', padding: 0, background: 'transparent' }}>
+<div className="cred-card-img" style={{ overflow: 'hidden', padding: 0, background: 'transparent' }}>
                     {cert.pdfUrl.endsWith('.pdf') ? (
                       <iframe 
                         src={`${cert.pdfUrl}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`} 
@@ -239,20 +239,20 @@ export default function Credentials({ parallaxOffset, scrollY }) {
                         tabIndex="-1"
                       />
                     ) : (
-                      <img src={cert.pdfUrl} alt={cert.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+<img src={cert.pdfUrl} alt={cert.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                     )}
                   </div>
                   <div className="cred-content">
                     <div className="cred-header">
                       <div>
                         <h3 className="cred-title-text">{cert.title}</h3>
-                        <p className="cred-org" style={{ color: cert.color }}>{cert.org}</p>
+<p className="cred-org" style={{ color: cert.color }}>{cert.org}</p>
                       </div>
                       <span className="cred-date">{cert.date}</span>
                     </div>
                     <div className="cred-tags">
                       {cert.tags.map(tag => (
-                        <span key={tag} className="cred-tag" style={{ color: cert.color, borderColor: `${cert.color}40`, backgroundColor: `${cert.color}15` }}>
+<span key={tag} className="cred-tag" style={{ color: cert.color, borderColor: `${cert.color}40`, backgroundColor: `${cert.color}15` }}>
                           {tag}
                         </span>
                       ))}
@@ -270,7 +270,7 @@ export default function Credentials({ parallaxOffset, scrollY }) {
       </div>
       {/* MODAL */}
       {selectedCert && (
-        <div className="cert-modal-overlay" onClick={() => setSelectedCert(null)}>
+<button className="cert-modal-overlay" onClick={() => setSelectedCert(null)} aria-label="Close certificate modal"></button>
           <div 
             className="cert-modal-content" 
             style={{ borderColor: `${selectedCert.color}50` }}
@@ -286,15 +286,15 @@ export default function Credentials({ parallaxOffset, scrollY }) {
                       title={selectedCert.title}
                     />
                   ) : (
-                    <img src={selectedCert.pdfUrl} alt={selectedCert.title} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }} />
+<img src={selectedCert.pdfUrl} alt={selectedCert.title} style={{ width: '100%', height: '100%', objectFit: 'contain', borderRadius: '8px' }} />
                   )}
                 </div>
               </div>
               
               <div className="cert-modal-right">
-                <button className="cert-modal-close" onClick={() => setSelectedCert(null)}>
+<button className="cert-modal-close" aria-label="Close certificate" onClick={() => setSelectedCert(null)}>
                   <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-                </button>
+<button aria-label='Submit'>Submit</button>
                 
                 <div className="cm-tags">
                   {selectedCert.tags.map(tag => (
@@ -304,7 +304,7 @@ export default function Credentials({ parallaxOffset, scrollY }) {
                 
                 <h2 className="cm-title">{selectedCert.title}</h2>
                 <p className="cm-org-date">
-                  <span style={{ color: selectedCert.color }}>{selectedCert.org}</span> — {selectedCert.date}
+<span style={{ color: selectedCert.color }}>{selectedCert.org}</span> — {selectedCert.date}
                 </p>
                 
                 <p className="cm-desc">{selectedCert.description}</p>
@@ -314,37 +314,37 @@ export default function Credentials({ parallaxOffset, scrollY }) {
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg>
                     {selectedCert.certId}
                   </div>
-                  <button 
+<button aria-label='Submit'>
                     className="cm-verify" 
                     style={{ color: selectedCert.color, borderColor: selectedCert.color }}
                     onClick={() => window.open(selectedCert.pdfUrl, '_blank')}
                   >
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
                     Verify
-                  </button>
+<button aria-label='Submit'>Submit</button>
                 </div>
               </div>
             </div>
             
             <div className="cert-modal-footer">
-              <button 
+<button aria-label='Submit'>
                 className="cm-nav-btn" 
                 disabled={filteredCerts.findIndex(c => c.id === selectedCert.id) === 0}
                 onClick={() => setSelectedCert(filteredCerts[filteredCerts.findIndex(c => c.id === selectedCert.id) - 1])}
               >
                 &lt; Previous
-              </button>
+<button aria-label='Submit'>Submit</button>
               <div className="cm-nav-info">
                 {filteredCerts.findIndex(c => c.id === selectedCert.id) + 1} / {filteredCerts.length} • &larr; &rarr; • Esc
               </div>
-              <button 
+<button aria-label="Submit">
                 className="cm-nav-btn"
                 style={{ color: selectedCert.color }}
                 disabled={filteredCerts.findIndex(c => c.id === selectedCert.id) === filteredCerts.length - 1}
                 onClick={() => setSelectedCert(filteredCerts[filteredCerts.findIndex(c => c.id === selectedCert.id) + 1])}
               >
                 Next &gt;
-              </button>
+</button>
             </div>
           </div>
         </div>
