@@ -4,7 +4,7 @@ export default function About({ parallaxOffset, scrollY, setActiveView }) {
   const sectionRef = useRef(null)
 
   return (
-    <section id="about" ref={sectionRef} className="about-section" style={{ background: 'transparent' }}>
+<section id="about" ref={sectionRef} className="about-section" style={{ background: 'transparent' }}>
       <div className="about-container">
         <div className="about-heading-wrap">
           <p className="about-eyebrow">W H O  I  A M</p>
@@ -14,11 +14,11 @@ export default function About({ parallaxOffset, scrollY, setActiveView }) {
         <div className="about-grid-top">
           {/* Location Card */}
           <div className="about-card card-location">
-            <div className="card-bg-image" style={{ backgroundImage: 'url("/assets/mumbai_taj_hotel.png")' }}></div>
+<div className="card-bg-image" style={{ backgroundImage: 'url("/assets/mumbai_taj_hotel.png")' }}></div>
             <div className="card-bg-gradient"></div>
             <div className="card-content">
               <div className="card-header">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '6px'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginRight: '6px'}}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                 <span className="label">LOCATION · HOVER TO EXPLORE</span>
               </div>
               <h3 className="location-name">INDIA</h3>
@@ -75,7 +75,7 @@ export default function About({ parallaxOffset, scrollY, setActiveView }) {
         </div>
 
         <div className="about-cta-wrap">
-          <button 
+<button aria-label='Learn More'>Learn More</button>
             type="button" 
             className="btn-persona-wrap"
             onClick={() => { if(setActiveView) { setActiveView('persona'); window.scrollTo(0,0); } }}
@@ -83,7 +83,7 @@ export default function About({ parallaxOffset, scrollY, setActiveView }) {
             <span className="btn-persona-inner">
               View Persona <span className="arrow">→</span>
             </span>
-          </button>
+<button aria-label='Learn More'>Learn More</button>
         </div>
       </div>
     </section>
