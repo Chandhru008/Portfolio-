@@ -32,7 +32,7 @@ export default function Hero({ parallaxOffset, scrollY }) {
   }, [scrollY])
 
   return (
-    <section id="home" className="hero-scene" style={{ background: 'transparent' }}>
+<section id="home" className="hero-scene" style={{ background: 'transparent' }}>
       <div ref={heroContentRef} className="hero-content">
         <p className="hero-eyebrow">HELLO! I&apos;M</p>
         <div className="hero-name-wrap">
@@ -56,17 +56,17 @@ export default function Hero({ parallaxOffset, scrollY }) {
           <span className="text-green-light">machine learning</span>.
         </p>
         <div className="hero-cta">
-          <div style={{ position: 'relative', display: 'inline-block' }}>
-            <button 
+<div style={{ position: 'relative', display: 'inline-block' }}>
+<button aria-label="Hero Button">
               type="button" 
               className="glass-btn cta-resume"
               onClick={() => setShowResumeMenu(!showResumeMenu)}
             >
               Resume &amp; CV
-            </button>
+</button>
             
             {showResumeMenu && (
-              <div style={{
+<div style={{
                 position: 'absolute',
                 top: 'calc(100% + 12px)',
                 left: '50%',
